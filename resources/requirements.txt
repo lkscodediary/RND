@@ -1,0 +1,12 @@
+#############Computation#################
+numpy
+scipy
+statsmodels
+#############Misc#################
+holidays
+#############Data#################
+pandas
+#############Visualization#################
+altair
+#############Connection################
+alpaca-py
