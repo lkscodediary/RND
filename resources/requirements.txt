@@ -8,5 +8,3 @@ holidays
 pandas
 #############Visualization#################
 altair
-#############Connection################
-alpaca-py
