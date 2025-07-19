@@ -7,4 +7,5 @@ holidays
 #############Data#################
 pandas
 #############Visualization#################
-altair
+matplotlib
+notebook
