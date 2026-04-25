@@ -1,5 +1,7 @@
-# RND Sandbox
-If you enjoy coding both in R and Python or like to explore/experiment with packages from both ecosystems, and love the interactive experience of Jupyter Notebook then follow these steps.
+# Quantitative RND Sandbox
+A non intimidating Quantitative Research repo that is targeted towards learners and practitioners looking for a quick refresher.
+Also if you enjoy coding both in R and Python or like to explore/experiment with packages from both ecosystems, and love the interactive experience of Jupyter Notebook then follow these steps.
+
 
 ## Goal is to get to this stage
 ![Sandbox](https://github.com/lkscodediary/RND/blob/main/resources/1.gif)
