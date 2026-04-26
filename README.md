@@ -28,27 +28,29 @@ foo@bar:~/RND$ source venv/bin/activate
 ```
 ### 6) Tidy up some things in jupyter notebook. This step is crucial for step 8
 ```console
-(venv) foo@bar:~/RND$ jupyter notebook --generate-config #This is generate a .jupyter in your home directory
+(venv) foo@bar:~/RND$ jupyter notebook --generate-config #Crucial step. This generates a .jupyter directory in HOME directory
 (venv) foo@bar:~/RND$ jupyter notebook password #This is optional
 ```
-### 7) Start R
+### 7) Configure and Prep for R
 ```console
-foo@bar:~/RND$ R --no-save
+(venv) foo@bar:~/RND$ ./resources/setup.sh #This creates a .Rprofile in HOME directory to direct new R libraries to rlibs directory in RND
+(venv) foo@bar:~/RND$ sudo apt-get install libcurl4-openssl-dev #For Linux, ensure curl is installed
+(venv) foo@bar:~/RND$ R --no-save #For Linux, start R in terminal
 ```
-### 8) Run the following commands in R
+### 8) Install Packages in R
 ```R
-#Install IRkernel
-install.packages("IRkernel", INSTALL_opts = "--no-multiarch")
-
-#Configure IRkernel. This is how we connect R kernel to Jupyter Notebook.
-#More at https://github.com/IRkernel/IRkernel
-#My version of R at the time of writing this is 4.4.2
-IRkernel::installspec(name = "ir44", displayname = 'R 4.4')
-
-#Quit R from console or RGui
-q()
+df <- read.csv("resources/requirements_r.txt")
+install.packages(df$Package, INSTALL_opts = "--no-multiarch") #This should install all of the packages listed in resources/requirements_r.txt
 ```
-### 9) Start Jupyter Notebook
+### 9) Connect R Kernel to Jupyter Notebook
+More at https://github.com/IRkernel/IRkernel
+```R
+install.packages("IRkernel", INSTALL_opts = "--no-multiarch") #Install IRkernel
+
+IRkernel::installspec(name = "ir44", displayname = 'R 4.4') #Final connection to jupyter notebook
+q() #Quit R from console or RGui
+```
+### 10) Start Jupyter Notebook and Enjoy
 ```console
-foo@bar:~/RND$ jupyter notebook
+(venv) foo@bar:~/RND$ jupyter notebook
 ```
