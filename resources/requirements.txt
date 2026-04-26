@@ -4,6 +4,8 @@ scipy
 statsmodels
 #############Data#################
 pandas
+#############QF###################
+ta
 #############Visualization#################
 matplotlib
-notebook
+jupyterlab

@@ -1,0 +1,10 @@
+#This is a profile file for R for my personal taste 
+local({
+    r = getOption("repos")
+    r["CRAN"] = "https://cloud.r-project.org"
+    options(repos = r)
+    options(stringsAsFactors=FALSE,scipen=999,digits=5,
+    shiny.port=8989,shiny.host='0.0.0.0',
+    repr.plot.width=20, repr.plot.height=9, repr.plot.quality = 100, repr.plot.res=240)
+})
+options(download.file.method = "libcurl")

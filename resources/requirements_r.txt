@@ -1,0 +1,11 @@
+Package,Install,Description
+zoo,Y,data structure
+xts,Y,time series data structure
+tseries,Y,Time Series Analysis
+nortest,Y,Test for Normality
+moments,Y,Test for Normality based on moments
+TTR,Y,Technical Analysis in R
+dplyr,Y,Data manipulation
+ggplot2,Y,Plotting
+scales,Y,Color size, and position for ggplot2
+IRkernel,Y,Kernal connector for jupyter notebook
